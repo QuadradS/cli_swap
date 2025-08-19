@@ -1,0 +1,6 @@
+dist/
+node_modules/
+id.json
+pools.json
+.env
+.idea/

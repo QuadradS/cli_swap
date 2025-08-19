@@ -1,0 +1,26 @@
+{
+  "name": "cli_swap",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app:run": "npx tsc && node dist/index.js",
+    "app:gen-data": "npx tsc && node -r dotenv/config dist/generate-data/index.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.4.13",
+    "@solana/spl-token-swap": "^0.4.4",
+    "@solana/web3.js": "^1.98.4",
+    "@types/yargs": "^17.0.33",
+    "buffer-layout": "^1.2.2",
+    "dotenv": "^17.2.1",
+    "yargs": "^18.0.0"
+  }
+}
