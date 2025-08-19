@@ -88,7 +88,6 @@ export async function main() {
     lamports_cost: Number(lamportsCost),
     lamports_cost_tokens_equiv: lamportsAsTokens,
     pnl_tokens: pnlUi,
-    //@ts-ignore
     trade_allowed: spread >= argv.spreadThresholdBps && pnlRaw > 0n,
   };
 
@@ -146,7 +145,7 @@ export async function main() {
     return;
   }
 
-  const ixs = [] as import("@solana/web3.js").TransactionInstruction[];
+  const ixs = [] as TransactionInstruction[];
   ixs.push(ComputeBudgetProgram.setComputeUnitPrice({microLamports: Number(priorityFeeMicroLamports)}));
   ixs.push(ComputeBudgetProgram.setComputeUnitLimit({units: Number(ASSUMED_CU)}));
 
